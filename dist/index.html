@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.min.css">
     <script src="js/index.js"></script>
-    <title>Gulp</title>
+    <title>Library App</title>
 </head>
 
 <body>
-    <h1>Hello</h1>
-    <img src="./img/gulp1.png" alt="Gulp">
+    <section class="library">
+        <header class="header library__header">
+            <div class="container">
+                <img src="./img/logo.svg" alt="logo">
+
+                <button class="header__btn-add">Добавить книгу</button>
+                <button class="header__btn header__search">Search</button>
+            </div>
+        </header>
+
+        <div class="container library__titles">
+            <h1 class="library__title">Моя библиотека</h1>
+
+            <p class="library__count">3 книги</p>
+
+            <div class="library__fields fields">
+                <div class="fields__block">
+                    <button class="fields__btn fields__btn_sort">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 18H9V16H3V18ZM3 6V8H21V6H3ZM3 13H15V11H3V13Z" fill="white" />
+                        </svg>
+                        <span class="fields__text">По рейтингу</span>
+                    </button>
+
+                    <ul class="fields__list fields__list_sort">
+                        <li class="fields__item">
+                            <button class="fields__button">от большего</button>
+                        </li>
+                        <li class="fields__item">
+                            <button class="fields__button">от меньшего</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="fields__block">
+                    <button class="fields__btn fields__btn_sort">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.5 11H11.71L11.43 10.73C12.41 9.59 13 8.11 13 6.5C13 2.91 10.09 0 6.5 0C2.91 0 0 2.91 0 6.5C0 10.09 2.91 13 6.5 13C8.11 13 9.59 12.41 10.73 11.43L11 11.71V12.5L16 17.49L17.49 16L12.5 11ZM6.5 11C4.01 11 2 8.99 2 6.5C2 4.01 4.01 2 6.5 2C8.99 2 11 4.01 11 6.5C11 8.99 8.99 11 6.5 11Z"
+                                fill="white" />
+                        </svg>
+                        <span class="fields__text">Фильтр</span>
+                    </button>
+
+                    <ul class="fields__list fields__list_sort">
+                        <li class="fields__item">
+                            <button class="fields__item">хочу прочитать</button>
+                        </li>
+                        <li class="fields__item">
+                            <button class="fields__item">прочитал</button>
+                        </li>
+                        <li class="fields__item">
+                            <button class="fields__item">читаю</button>
+                        </li>
+                        <li class="fields__item">
+                            <button class="fields__item">не дочитал</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="book"></section>
+    <section class="add"></section>
+
 </body>
 
 </html>
