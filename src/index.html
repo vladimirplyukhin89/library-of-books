@@ -17,7 +17,8 @@
                 <img src="./img/logo.svg" alt="logo">
 
                 <button class="header__btn-add">Добавить книгу</button>
-                <button class="header__btn header__search">Search</button>
+
+                <button class="header__btn header_btn_search">Поиск</button>
             </div>
         </header>
 
@@ -46,7 +47,7 @@
                 </div>
 
                 <div class="fields__block">
-                    <button class="fields__btn fields__btn_sort">
+                    <button class="fields__btn fields__btn_filter">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M12.5 11H11.71L11.43 10.73C12.41 9.59 13 8.11 13 6.5C13 2.91 10.09 0 6.5 0C2.91 0 0 2.91 0 6.5C0 10.09 2.91 13 6.5 13C8.11 13 9.59 12.41 10.73 11.43L11 11.71V12.5L16 17.49L17.49 16L12.5 11ZM6.5 11C4.01 11 2 8.99 2 6.5C2 4.01 4.01 2 6.5 2C8.99 2 11 4.01 11 6.5C11 8.99 8.99 11 6.5 11Z"
@@ -55,27 +56,246 @@
                         <span class="fields__text">Фильтр</span>
                     </button>
 
-                    <ul class="fields__list fields__list_sort">
+                    <ul class="fields__list fields__btn_filter">
                         <li class="fields__item">
-                            <button class="fields__item">хочу прочитать</button>
+                            <button class="fields__button">хочу прочитать</button>
                         </li>
                         <li class="fields__item">
-                            <button class="fields__item">прочитал</button>
+                            <button class="fields__button">прочитал</button>
                         </li>
                         <li class="fields__item">
-                            <button class="fields__item">читаю</button>
+                            <button class="fields__button">читаю</button>
                         </li>
                         <li class="fields__item">
-                            <button class="fields__item">не дочитал</button>
+                            <button class="fields__button">не дочитал</button>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+
+        <div class="container library__list-container">
+            <h2 class="visually-hidden">Список книг</h2>
+            <ul class="library__list">
+                <li class="library__item">
+                    <a href="/book">
+                        <arcticle class="card">
+                            <div class="card__picture">
+                                <img src="./img/1984.jpg" alt="Обложка книги - 1984" class="card__image">
+
+                                <p class="card__label">хочу прочитать</p>
+                            </div>
+
+                            <div class="card__content">
+                                <h3 class="card__title">1984</h3>
+
+                                <p class="card__author">Джордж Оруэлл</p>
+
+                                <p class="card__description">Главный герой — Уинстон Смит — живёт в Лондоне, работает в
+                                    Министерстве правды и является...</p>
+
+                                <div class="card__rating">
+                                    <img class="card__rating-star" src="./img/star.svg" alt="Рейтинг 4 из 5">
+                                    <img class="card__rating-star" src="./img/star.svg" alt="">
+                                    <img class="card__rating-star" src="./img/star.svg" alt="">
+                                    <img class="card__rating-star" src="./img/star.svg" alt="">
+                                    <img class="card__rating-star" src="./img/star_0.svg" alt="">
+                                </div>
+                            </div>
+                        </arcticle>
+                    </a>
+                </li>
+
+                <li class="library__item">
+                    <a href="/book">
+                        <arcticle class="card">
+                            <div class="card__wrapper">
+                                <img src="./img/book.jpg" alt="Обложка книги" class="card__image">
+
+                                <p class="card__label">хочу прочитать</p>
+                            </div>
+
+                            <div class="card__content">
+                                <h3 class="card__title">Гарри Поттер и Философский камень</h3>
+
+                                <p class="card__author">Джоан Роулинг</p>
+
+                                <p class="card__description">Первый роман в серии книг про юного волшебника Гарри
+                                    Поттера, написанный Дж. К. Роулинг. В нём...</p>
+
+                                <div class="card__rating">
+                                    <img class="card__rating-star" src="./img/star.svg" alt="Рейтинг 5 из 5">
+                                    <img class="card__rating-star" src="./img/star.svg" alt="">
+                                    <img class="card__rating-star" src="./img/star.svg" alt="">
+                                    <img class="card__rating-star" src="./img/star.svg" alt="">
+                                    <img class="card__rating-star" src="./img/star.svg" alt="">
+                                </div>
+                            </div>
+                        </arcticle>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <footer class="footer">
+            <button class="footer__btn library__add-btn" aria-label="Добавить книгу"></button>
+        </footer>
     </section>
 
-    <section class="book"></section>
-    <section class="add"></section>
+    <section class="book">
+        <header class="header library__header">
+            <div class="container">
+                <button class="header__btn header__btn_back">назад</button>
+
+                <button class="header__btn header__btn_delete">удалить</button>
+            </div>
+        </header>
+
+        <div class="container book__container">
+            <div class="book__wrapper">
+                <img class="book__img" src="./img/1984.jpg" alt="обложка книги - 1984">
+
+                <button class="book__label">хочу прочитать</button>
+            </div>
+
+            <div class="book__content">
+                <h3 class="book__title">1984</h3>
+
+                <p class="book__author">Джордж Оруэлл</p>
+
+                <div class="book__rating">
+                    <img class="book__rating-star" src="./img/star.svg" alt="Рейтинг 5 из 5">
+                    <img class="book__rating-star" src="./img/star.svg" alt="">
+                    <img class="book__rating-star" src="./img/star.svg" alt="">
+                    <img class="book__rating-star" src="./img/star.svg" alt="">
+                    <img class="book__rating-star" src="./img/star_0.svg" alt="">
+                </div>
+
+                <p class="book__subtitle">Описание</p>
+
+                <p class="book__description">Главный герой — Уинстон Смит — живёт в Лондоне, работает в Министерстве
+                    правды и является членом внешней партии. Он не
+                    разделяет партийные лозунги и идеологию и в глубине души сильно сомневается в партии, окружающей
+                    действительности и
+                    вообще во всём том, в чём только можно сомневаться. Чтобы «выпустить пар» и не совершить
+                    какой-нибудь безрассудный
+                    поступок, ведёт дневник, в котором старается излагать все свои сомнения. На людях же притворяется
+                    приверженцем партийных
+                    идей. Однако опасается, что девушка Джулия, работающая в том же министерстве, шпионит за ним и хочет
+                    разоблачить его. В
+                    то же время полагает, что высокопоставленный сотрудник их министерства, член внутренней партии некий
+                    О’Брайен также не
+                    разделяет мнения партии и является подпольным революционером.</p>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <button class="footer__btn book__label" aria-label="Добавить книгу">хочу прочитать</button>
+        </footer>
+    </section>
+
+    <section class="add">
+        <header class="header add__header">
+            <div class="container">
+                <button class="header__btn header__btn_back">назад</button>
+
+                <button class="header__btn header__btn_search">поиск</button>
+            </div>
+        </header>
+
+        <form class="add__form">
+            <div class="container add__container">
+                <fieldset class="add__fieldset">
+                    <legend class="add__title">Название и описание</legend>
+
+                    <p class="add__step">шаг 1/3</p>
+
+                    <label for="title" class="add__label">Название</label>
+                    <input type="text" class="add__text" name="title" id="title">
+
+                    <label for="author" class="add__label">Автор</label>
+                    <input type="text" class="add__text" name="author" id="author">
+
+                    <label for="description" class="add__label">Описание</label>
+                    <textarea type="text" class="add__text add__text_area" name="description"
+                        id="description"></textarea>
+
+                </fieldset>
+                <fieldset class="add__fieldset">
+                    <legend class="add__title">Обложка</legend>
+
+                    <p class="add__step">шаг 2/3</p>
+
+                    <div class="upload">
+                        <p class="add__subtitle">Загрузите обложку</p>
+
+                        <label class="upload__label">
+                            <img src="about:blank" class="upload__preview" alt="Превью изображения">
+
+                            <input type="file" class="upload__file" accept="image/*">
+                        </label>
+                    </div>
+
+                </fieldset>
+                <fieldset class="add__fieldset">
+                    <legend class="add__title">Статус и оценка</legend>
+
+                    <p class="add__step">шаг 3/3</p>
+
+                    <fieldset class="status">
+                        <legend>Выберите статус книги</legend>
+
+                        <ul class="status__list">
+                            <li class="status__item">
+                                <input class="status__radio" type="radio" name="label" id="wish" value="wish">
+                                <label class="status__label" for="wish">хочу прочитать</label>
+                            </li>
+                            <li class="status__item">
+                                <input class="status__radio" type="radio" name="label" id="ready" value="ready">
+                                <label class="status__label" for="ready">прочитал</label>
+                            </li>
+                            <li class="status__item">
+                                <input class="status__radio" type="radio" name="label" id="read" value="read">
+                                <label class="status__label" for="read">читаю</label>
+                            </li>
+                            <li class="status__item">
+                                <input class="status__radio" type="radio" name="label" id="notfinished"
+                                    value="notfinished">
+                                <label class="status__label" for="notfinished">не дочитал</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset class="star">
+                        <legend>Поставьте оценку</legend>
+
+                        <div class="star__list">
+                            <input type="radio" name="rating" id="star-rating-5" class="star__radio" value="5">
+                            <label class="star__icon" for="star-rating-5"></label>
+
+                            <input type="radio" name="rating" id="star-rating-4" class="star__radio" value="4">
+                            <label class="star__icon" for="star-rating-4"></label>
+
+                            <input type="radio" name="rating" id="star-rating-3" class="star__radio" value="3">
+                            <label class="star__icon" for="star-rating-3"></label>
+
+                            <input type="radio" name="rating" id="star-rating-2" class="star__radio" value="2">
+                            <label class="star__icon" for="star-rating-2"></label>
+
+                            <input type="radio" name="rating" id="star-rating-1" class="star__radio" value="1">
+                            <label class="star__icon" for="star-rating-1"></label>
+                        </div>
+                    </fieldset>
+
+                </fieldset>
+            </div>
+
+            <div class="footer">
+                <button type="button" class="footer__btn add__btn">далее</button>
+            </div>
+        </form>
+    </section>
 
 </body>
 
